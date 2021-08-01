@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>login form</title>
+  </head>
+  <body>
+    <div class="hero">
+      <div class="form-box">
+        <div class="button-box">
+          <div id="btn"></div>
+          <button type="button" class="toggle-btn" onclick="login()">
+            Login
+          </button>
+          <button type="button" class="toggle-btn" onclick="register()">
+            SignUp
+          </button>
+        </div>
+        <form
+          id="login"
+          method="post"
+          class="input-group"
+          name="form1"
+          action="subpage/login.html"
+          onsubmit="return validated_login()"
+        >
+          <input
+            type="email"
+            class="input-field"
+            placeholder="Email"
+            name="email1"
+            required
+          />
+          <div id="email_error1">Please fill up your Email</div>
+          <input
+            type="password"
+            class="input-field"
+            placeholder="Password"
+            name="password1"
+            required
+          />
+          <div id="pass_error1">Please fill up your Password</div>
+          <input type="checkbox" name="checkbox" class="check-box" required />
+          <label form="checkbox">Remember Password</label>
+          <button type="submit" class="submit-btn">Login</button>
+        </form>
+
+        <form
+          id="register"
+          class="input-group"
+          name="form2"
+          action="subpage/signUp.html"
+          onsubmit="return validated_signUp()"
+        >
+          <input type="tel" class="input-field" placeholder="Phone" required />
+          <input
+            type="email"
+            class="input-field"
+            placeholder="Email"
+            name="email2"
+            required
+          />
+          <div id="email_error2">Please fill up your Email</div>
+          <input
+            type="password"
+            class="input-field"
+            placeholder="Password"
+            name="password2"
+            required
+          />
+          <div id="pass_error2">Please fill up your Password</div>
+          <input type="checkbox" name="checkbox" class="check-box" required />
+          <label form="checkbox">I agree with the Terms and Conditions</label>
+          <button type="submit" class="submit-btn">SignUp</button>
+        </form>
+      </div>
+    </div>
+    <script src="script/app.js"></script>
+  </body>
+</html>
